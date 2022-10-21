@@ -24,6 +24,8 @@ public class RobotContainer {
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
   private final static DriveTrain drive = new DriveTrain();
+  private final static TimedAuto timedAuto = new TimedAuto();
+  private final static DistanceAuto distanceAuto = new DistanceAuto(1, 0);
   private static Joystick joy1;
   private static Joystick joy2;
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -48,8 +50,9 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
+
     // An ExampleCommand will run in autonomous
-    return m_autoCommand;
+    return DistanceAuto;
   }
   public static Joystick getJoy1(){
     return joy1;
