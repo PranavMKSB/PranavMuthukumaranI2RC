@@ -15,6 +15,7 @@ public class DriveTrain extends SubsystemBase {
   private WPI_TalonSRX left = new WPI_TalonSRX(Constants.leftPort);
   private WPI_TalonSRX right = new WPI_TalonSRX(Constants.rightPort);
   private double ticksToMeters = (127.0/10581.0)/100.0;
+  private AHRS navx;
   /** Creates a new DriveTrain. */
   public DriveTrain() {
     left.configFactoryDefault();
