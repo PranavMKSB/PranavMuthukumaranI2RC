@@ -29,7 +29,7 @@ public class DriveTrain extends SubsystemBase {
     right.set(ControlMode.PercentOutput, rPower);
   }
   public double getPos(){
-    return(left.getSelectedSensorPosition()+right.getSelectedSensorPosition())\2*ticksToMeters);
+    return -1*(left.getSelectedSensorPosition()+right.getSelectedSensorPosition())\2*ticksToMeters);
   }
   public void resetEncoders(){
     left.setSelectedSensorPosition(0);
